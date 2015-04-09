@@ -34,9 +34,11 @@ ___
 
 ---
 
-Version 0.1 [Wireframe]
+Wireframe
 ![Wireframe](assets/wireframe.png)
 
+Data Model
+![Data Model](assets/dm.png)
 ---
 
 ###Made by Rushindra Sinha
