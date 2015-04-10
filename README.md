@@ -27,7 +27,7 @@ ___
 
 ---
 ##### Pivotal Tracker
-[Project Management]('https://www.pivotaltracker.com/n/projects/1320884')
+[Project Management](https://www.pivotaltracker.com/n/projects/1320884)
 
 ##### Heroku Link for Production
 
