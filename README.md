@@ -12,11 +12,11 @@ ___
 1. Initialised rails app.
 2. Commited to GitHub repo.
 3. Updated README.md
+4. Set up Bootstrap
 
 ---
 
 ##### Upcoming
-1. Set up Bootstrap
 2. Set up required Database
 3. Create Various Models based on the Data Model Structure
 
