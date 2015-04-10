@@ -1,4 +1,4 @@
-#This is my HappyHour Web App made with Ruby On Rails + Bootstrap and some JavaScrupt
+#This is my HappyHour Web App made with Ruby On Rails + Bootstrap and some JavaScript
 ---
 
 ### Description :
