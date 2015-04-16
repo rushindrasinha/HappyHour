@@ -15,6 +15,7 @@ ___
 4. Set up Bootstrap
 5. Created User Model
 6. Created Login System (fully functional)
+7. Styled Sign Up and Log In Forms
 
 
 ---
