@@ -43,7 +43,10 @@ ___
 Wireframe
 ![Wireframe](assets/wireframe.png)
 
-Data Model
+Data Model [Updated]
+![Data Model](assets/dmnew.png)
+
+Data Model [Old]
 ![Data Model](assets/dm.png)
 ---
 
