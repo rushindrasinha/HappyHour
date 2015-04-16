@@ -13,13 +13,17 @@ ___
 2. Commited to GitHub repo.
 3. Updated README.md
 4. Set up Bootstrap
+5. Created User Model
+6. Created Login System (fully functional)
+
 
 ---
 
 ##### Upcoming
-2. Set up required Database
-3. Create Various Models based on the Data Model Structure
-
+1. Set up Bars Model
+2. Set up Offers Model
+3. Use has_many and belongs_to for all 3 models
+4. Start Styling
 
 ---
 ##### Known Bugs
