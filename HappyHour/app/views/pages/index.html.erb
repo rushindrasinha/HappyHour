@@ -1,0 +1,17 @@
+
+
+<div class="jumbotron">
+    <h1>Happy Hour</h1>
+    <p>Anytime + Anywhere ... Find you the best Happy Hour Deals around you</p>
+    <% if logged_in? %>
+    <ul>
+      <% @users.each do |user| %>
+        <li>
+          <%= user.name %>
+        </li>
+        <% end %>
+    </ul>
+    <% else %>
+    <p> Welcome to Happy Hours </p>
+    <% end %>
+</div>

@@ -1,10 +1,4 @@
-class PagesController < ApplicationController
-
-  def about
-  end
-
-  def contact
-  end
+class UsersController < ApplicationController
 
   def index
     @users = User.all
@@ -18,7 +12,7 @@ class PagesController < ApplicationController
       @user = User.new(user_params)
 
       if @user.save
-        redirect_to users_path
+        redirect_to root_path
       else
         render :new
       end

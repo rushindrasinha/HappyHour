@@ -1,7 +1,27 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  root 'pages#index'
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
+
+  #Sign up Routes
+  get 'signup' => 'users#new'
+  post 'users' => 'users#create'
+
+  #Log In session Routes
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+
+  # get 'users' => 'users#index'
+  # get 'signup' => 'users#new'
+  # post 'users' => 'users#create'
+
+  # # routes for loggin in/out
+  # get 'login' => 'sessions#new'
+  # post 'login' => 'sessions#create'
+  # delete 'logout' => 'sessions#destroy'
+
 
 
 

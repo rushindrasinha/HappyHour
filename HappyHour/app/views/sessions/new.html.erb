@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h1>Log In</h1>
+  <%= form_for :login do |f| %>
+    <div>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+    <br>
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <br>
+    <div>
+      <%= f.submit 'Log In' %>
+    </div>
+    <br>
+  <% end %>
+</div>
