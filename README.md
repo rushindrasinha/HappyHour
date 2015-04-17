@@ -16,15 +16,20 @@ ___
 5. Created User Model
 6. Created Login System (fully functional)
 7. Styled Sign Up and Log In Forms
+8. Created Bars and Offers Model
+9. Created Users and Bars relation
+10. Added Bars index
+11. Added functionality to Add / Edit / Delete Bars
+12. Added User Account settings with ability to update User details
+13. Bootstrap Forms
+14. Set up belong_to and has_many relation between Users -> Bars -> Offers
 
 
 ---
 
 ##### Upcoming
-1. Set up Bars Model
-2. Set up Offers Model
-3. Use has_many and belongs_to for all 3 models
-4. Start Styling
+1. Set up Offers (Everything)
+2. Start Styling
 
 ---
 ##### Known Bugs
