@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h2>Account Settings</h2>
+  <br>
+  <%= form_for @user do |f|  %>
+    
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: "form-control", disabled:true %>
+      </div>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+      <br>
+      <%= f.submit "Update", class: "btn btn-default" %>
+      <br>
+  <% end %>
+</div>

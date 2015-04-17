@@ -8,6 +8,7 @@ class PagesController < ApplicationController
 
   def index
     @users = User.all
+    @bars = Bar.all
   end
 
   def new
@@ -23,6 +24,21 @@ class PagesController < ApplicationController
         render :new
       end
   end
+
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update_attributes(params.require(:user).permit(:name, :password))
+      redirect_to user_path(current_user)
+    else
+      render :edit
+    end
+  end #end update def
 
 
   private

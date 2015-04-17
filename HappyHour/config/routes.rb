@@ -12,9 +12,29 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  #User Routes
+  get 'users/:id' => 'users#show', as: :user
+  get "users/:id/edit" => "users#edit", as: :edit_user
+  patch "users/:id" => "users#update"
+
+  #Create new bars
+  get 'bars/' => 'bars#index'
+  get 'bars/new' => 'bars#new', as: :new_bar
+  post 'bars/' => 'bars#create'
+
+  #Edit Bars
+  get 'bars/:id' => 'bars#show', as: :bar
+  get "bars/:id/edit" => "bars#edit", as: :edit_bar
+  patch "bars/:id" => "bars#update"
+  delete "bars/:id" => "bars#destroy", as: :delete_bar
+
+  #resources :bars
 
 
 
+
+
+#get "beans/:id" => "beans#show", as: :bean
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

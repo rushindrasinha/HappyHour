@@ -4,13 +4,19 @@
     <h1>Happy Hour</h1>
     <p>Anytime + Anywhere ... Find you the best Happy Hour Deals around you</p>
     <% if logged_in? %>
-    <ul>
-      <% @users.each do |user| %>
-        <li>
-          <%= user.name %>
-        </li>
+    <h2>List of Bars</h2>
+       <ul>
+        <% @bars.each do |bar| %>
+          <div class="barlist">
+            <li><%= bar.bar_name %></li>
+            <%= bar.location %>
+            <br>
+            <%= bar.zip %>
+            <br>
+            <%= bar.day %>
+          </div>
         <% end %>
-    </ul>
+      </ul>
     <% else %>
     <p> Welcome to Happy Hours </p>
     <% end %>

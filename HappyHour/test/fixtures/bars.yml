@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bar_name: MyString
+  location: MyString
+  zip: 1
+  day: MyString
+  user_id: 
+
+two:
+  bar_name: MyString
+  location: MyString
+  zip: 1
+  day: MyString
+  user_id: 

@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  <h2>List of Bars</h2>
+     <ul>
+      <% @bars.each do |bar| %>
+        <div class="barlist">
+          <li><%= bar.bar_name %></li>
+          <%= bar.location %>
+          <br>
+          <%= bar.zip %>
+          <br>
+          <%= bar.day %>
+        </div>
+      <% end %>
+    </ul>
+</div>

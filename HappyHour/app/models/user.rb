@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :bars
 
   attr_reader :password
 

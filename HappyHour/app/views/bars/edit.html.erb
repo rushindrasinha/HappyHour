@@ -1,0 +1,27 @@
+<div class="jumbotron">
+  <h2> Edit Your Bar </h2>
+
+  <%= form_for @bar do |f|  %>
+    <div class="form-group">
+      <%= f.label :bar_name %>
+      <%= f.text_field :bar_name, class: "form-control" %>
+    </div>
+      <br>
+    <div class="form-group">
+      <%= f.label :location %>
+      <%= f.text_field :location, class: "form-control" %>
+    </div>
+      <br>
+    <div class="form-group">
+      <%= f.label :zip %>
+      <%= f.text_field :zip, class: "form-control" %>
+    </div>
+      <br>
+    <div class="form-group">
+      <%= f.label :day %>
+      <%= f.text_field :day, class: "form-control" %>
+    </div>
+      <br>
+      <%= f.submit "Add This Bar!", class: "btn btn-default" %>
+  <% end %>
+</div>
