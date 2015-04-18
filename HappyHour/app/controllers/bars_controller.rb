@@ -9,8 +9,9 @@ class BarsController < ApplicationController
 
 
   def create
-
-    @bar = Bar.new(params.require(:bar).permit(:bar_name, :location, :zip, :day))
+    #@user = current_user
+    #@bar = @user.bars.new(params)
+    @bar = Bar.new(params.require(:bar).permit(:bar_name, :location, :zip, :day, :time, :image, :description))
     @bar.user = current_user
     if @bar.save
       redirect_to user_path(current_user)
@@ -20,7 +21,7 @@ class BarsController < ApplicationController
   end
 
   def show
-    
+    @bar = Bar.find(params[:id])
   end
 
   def edit
@@ -30,7 +31,7 @@ class BarsController < ApplicationController
   def update
     @bar = Bar.find(params[:id])
 
-    if @bar.update_attributes(params.require(:bar).permit(:bar_name, :location, :zip, :day))
+    if @bar.update_attributes(params.require(:bar).permit(:bar_name, :location, :zip, :day, :time, :image, :description))
       redirect_to user_path(current_user)
     else
       render :edit

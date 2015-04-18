@@ -20,7 +20,7 @@
     <ul class="nav navbar-nav navbar-right">
     <% if logged_in? %>
       <li><a href="/"><%= "Logged in as : #{current_user.name}" %></a>
-      <li><%= link_to 'Show My Bars', user_path(current_user) %></li>
+      <li><%= link_to 'Manage My Bars', user_path(current_user) %></li>
       <li><%= link_to 'Add A Bar', new_bar_path %></li>
       <li><%= link_to 'Account Settings', edit_user_path(current_user) %></li>
       <li><%= link_to 'Log Out', logout_path, method: :delete %></li>

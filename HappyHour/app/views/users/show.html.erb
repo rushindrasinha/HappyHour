@@ -1,8 +1,8 @@
-<div class='jumbotron'
+<div class='jumbotron'>
   <section>
-    <h1><%= @user.name %></h1>
+    <h2>Hey <%= @user.name %>, Here are your Bars</h2>
   </section>
-
+</div>
   <section>
     <h2>Bars</h2>
 
@@ -12,9 +12,21 @@
         <p><strong>Bar Location : <%= bar.location %></strong></p>
         <p><strong>Zip Code : <%= bar.zip %></strong></p>
         <p><strong>Day of the week : <%= bar.day %></strong></p>
+        <p><strong>Happy Hour Timings : <%= bar.time %></strong></p>
+        <p><strong>Bar Description : <%= bar.description %></strong></p>
+        <p><strong>Photos : <%= bar.image %></strong></p>
+        <h3>Offers</h3>
+        <% bar.offers.each do |offer| %>
+        <div class="barlist">
+          <p><strong>Item : <%= offer.item %></strong></p>
+          <p><strong>Item : <%= offer.price %></strong></p>
+          <p><strong>Item : <%= offer.description %></strong></p>
+          <span class='edbutton'><%= link_to "Edit Offer", edit_offer_path(offer), class: "btn btn-info" %></span>
+        </div>
+        <% end %>
         <span class='edbutton'><%= link_to "Edit Bar", edit_bar_path(bar), class: "btn btn-primary" %></span>
+        <span class='edbutton'><%= link_to "Add Offer", bar_offers_path(bar), class: "btn btn-info" %></span>
         <span class='edbutton'><%= link_to "Delete Bar", delete_bar_path(bar), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %></span>
       </div>
     <% end %>
   </section>
-</div>

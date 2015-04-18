@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h2> Add an offer to your Bar </h2>
+
+  <%= form_for [@bar, @offer] do |f|  %>
+    <div class="form-group">
+      <%= f.label :item %>
+      <%= f.text_field :item, class: "form-control" %>
+    </div>
+      <br>
+    <div class="form-group">
+      <%= f.label :price %>
+      <%= f.number_field :price, class: "form-control" %>
+    </div>
+      <br>
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control", size: "25x15" %>
+    </div>
+      <br>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.text_field :image, class: "form-control" %>
+    </div>
+      <br>
+
+      <%= f.submit "Add This Offer!", class: "btn btn-default" %>
+  <% end %>
+</div>

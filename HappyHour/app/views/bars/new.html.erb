@@ -14,7 +14,7 @@
       <br>
     <div class="form-group">
       <%= f.label :zip %>
-      <%= f.text_field :zip, class: "form-control" %>
+      <%= f.number_field :zip, class: "form-control" %>
     </div>
       <br>
     <div class="form-group">
@@ -22,6 +22,22 @@
       <%= f.text_field :day, class: "form-control" %>
     </div>
       <br>
+    <div class="form-group">
+      <%= f.label :time %>
+      <%= f.text_field :time, class: "form-control" %>
+    </div>
+      <br>
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+      <br>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.text_field :image, class: "form-control" %>
+    </div>
+      <br>
+
 
       <%= f.submit "Add This Bar!", class: "btn btn-default" %>
   <% end %>

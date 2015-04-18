@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <ul>
+    <% @offers.each do |offer| %>
+    <p><%= offer.item %></p>
+    <p><%= offer.price %></p>
+    <p><%= offer.description %></p>
+    <% end %>
+  </ul>
+</div>

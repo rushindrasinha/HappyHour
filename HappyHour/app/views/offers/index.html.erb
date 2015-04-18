@@ -1,0 +1,16 @@
+<div class="jumbotron">
+    <h2>List of Offers</h2>
+       <ul>
+       <div class="barlist">
+        <% @offers.each do |offer| %>
+          <div class="offerlist">
+            <li><%= offer.item %></li>
+            <%= offer.price %>
+            <br>
+            <%= offer.description %>
+            <br>
+          </div>
+        <% end %>
+        </div>
+      </ul>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416235434) do
+ActiveRecord::Schema.define(version: 20150418001016) do
 
   create_table "bars", force: :cascade do |t|
     t.string   "bar_name"
@@ -19,8 +19,11 @@ ActiveRecord::Schema.define(version: 20150416235434) do
     t.integer  "zip"
     t.string   "day"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "time"
+    t.string   "image"
+    t.text     "description"
   end
 
   add_index "bars", ["user_id"], name: "index_bars_on_user_id"
@@ -32,6 +35,7 @@ ActiveRecord::Schema.define(version: 20150416235434) do
     t.integer  "bar_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image"
   end
 
   add_index "offers", ["bar_id"], name: "index_offers_on_bar_id"

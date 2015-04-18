@@ -28,13 +28,28 @@ Rails.application.routes.draw do
   patch "bars/:id" => "bars#update"
   delete "bars/:id" => "bars#destroy", as: :delete_bar
 
+
+  #Offers Create
+  get 'bars/:id/offers/' => 'offers#show'
+  get 'bars/:id/offers/new' => 'offers#new', as: :bar_offers
+  post 'bars/:id/offers/new' => 'offers#create'
+
+
+  #Offers Edit
+  get 'bars/:id/offers/:id/edit' => 'offers#edit', as: :edit_offer
+  patch 'bars/:id/offers/:id' => 'offers#update', as: :offer
+  delete 'bars/:id/offers/:id' => 'offers#destroy', as: :delete_offer
+
+
+
+
+
   #resources :bars
 
 
 
 
 
-#get "beans/:id" => "beans#show", as: :bean
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
