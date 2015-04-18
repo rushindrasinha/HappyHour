@@ -16,6 +16,13 @@
         <p><strong>Day of the week : <%= bar.day %></strong></p>
         <p><strong>Happy Hour Timings : <%= bar.time %></strong></p>
         <p><strong>Bar Description : <%= bar.description %></strong></p>
+        <% bar.offers.each do |offer| %>
+        <div class="barlist">
+          <p><strong>Item : <%= offer.item %></strong></p>
+          <p><strong>Item : <%= offer.price %></strong></p>
+          <p><strong>Item : <%= offer.description %></strong></p>
+        </div>
+        <% end %>
           </div>
         <% end %>
       </ul>

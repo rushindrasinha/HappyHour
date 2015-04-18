@@ -39,6 +39,10 @@
       <br>
 
 
-      <%= f.submit "Update Bar", class: "btn btn-default" %>
+      <%= f.submit "Update Bar", class: "btn btn-lg btn-default navbar-left" %>
+
+    <%= link_to "Delete Bar", delete_bar_path(@bar), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-lg btn-danger navbar-right" %>
+    <br>
+    <br>
   <% end %>
 </div>

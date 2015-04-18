@@ -22,9 +22,10 @@
       <%= f.text_field :image, class: "form-control" %>
     </div>
       <br>
-      <%= f.submit "Update Offer", class: "btn btn-default" %>
+      <%= f.submit "Update Offer", class: "navbar-left btn btn-lg btn-default" %>
+
+      <%= link_to "Delete Offer", delete_offer_path(@offer), method: :delete, data: {confirm: "Are you sure?"}, class: "navbar-right btn btn-lg btn-danger" %>
+      <br>
+      <br>
   <% end %>
 </div>
-
-
-<%= debug(params) %>

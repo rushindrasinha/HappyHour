@@ -21,12 +21,11 @@
           <p><strong>Item : <%= offer.item %></strong></p>
           <p><strong>Item : <%= offer.price %></strong></p>
           <p><strong>Item : <%= offer.description %></strong></p>
-          <span class='edbutton'><%= link_to "Edit Offer", edit_offer_path(offer), class: "btn btn-info" %></span>
+          <span class='edbutton'><%= link_to "Edit Offer", edit_offer_path(offer), class: "btn btn-md btn-success" %></span>
         </div>
         <% end %>
         <span class='edbutton'><%= link_to "Edit Bar", edit_bar_path(bar), class: "btn btn-primary" %></span>
-        <span class='edbutton'><%= link_to "Add Offer", bar_offers_path(bar), class: "btn btn-info" %></span>
-        <span class='edbutton'><%= link_to "Delete Bar", delete_bar_path(bar), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %></span>
+        <span class='edbutton'><%= link_to "Add Offer", bar_offers_path(bar), class: "btn btn-warning" %></span>
       </div>
     <% end %>
   </section>
