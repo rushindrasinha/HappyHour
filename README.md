@@ -23,13 +23,15 @@ ___
 12. Added User Account settings with ability to update User details
 13. Bootstrap Forms
 14. Set up belong_to and has_many relation between Users -> Bars -> Offers
-
+15. Offers have been set up (fully functional)
 
 ---
 
 ##### Upcoming
-1. Set up Offers (Everything)
-2. Start Styling
+1. Add Image gallery and use AWS to host images
+2. Each bar should be able to upload multiple images for image gallery
+3. Thumbnail images for offers
+4. Start Styling
 
 ---
 ##### Known Bugs
