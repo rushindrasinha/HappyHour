@@ -24,14 +24,17 @@ ___
 13. Bootstrap Forms
 14. Set up belong_to and has_many relation between Users -> Bars -> Offers
 15. Offers have been set up (fully functional)
+16. Added CarrieWave gem to upload images for Bars and Offers
+17. Added Scaled down and Thumbnail versions.
+18. Styled and organized the manage bars page better
+19. Added Number of bars displayed in navbar as well as number of offers in Manage Bar
 
 ---
 
 ##### Upcoming
-1. Add Image gallery and use AWS to host images
+1. Use AWS to host images
 2. Each bar should be able to upload multiple images for image gallery
-3. Thumbnail images for offers
-4. Start Styling
+3. Start Styling
 
 ---
 ##### Known Bugs
