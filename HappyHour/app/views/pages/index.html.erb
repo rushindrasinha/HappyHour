@@ -9,18 +9,19 @@
        <ul>
         <% @bars.each do |bar| %>
           <div class="barlist">
-        <p><strong>Bar Name : <%= bar.bar_name %></strong></p>
-        <p><strong>Photos : <%= bar.image %></strong></p>
-        <p><strong>Bar Location : <%= bar.location %></strong></p>
+        <p><h3><%= bar.bar_name %></h3></p>
+        <p><%= image_tag(bar.image_url) %></p>
+        <p><strong>Location : <%= bar.location %></strong></p>
         <p><strong>Zip Code : <%= bar.zip %></strong></p>
-        <p><strong>Day of the week : <%= bar.day %></strong></p>
+        <p><strong>Happy Hour Day(s) : <%= bar.day %></strong></p>
         <p><strong>Happy Hour Timings : <%= bar.time %></strong></p>
-        <p><strong>Bar Description : <%= bar.description %></strong></p>
+        <p><strong>Summary : <%= bar.description %></strong></p>
         <% bar.offers.each do |offer| %>
         <div class="barlist">
           <p><strong>Item : <%= offer.item %></strong></p>
-          <p><strong>Item : <%= offer.price %></strong></p>
-          <p><strong>Item : <%= offer.description %></strong></p>
+          <p><strong>Price : $<%= offer.price %></strong></p>
+          <p><strong>Details : <%= offer.description %></strong></p>
+          <p><%= image_tag(offer.image_url(:thumb)) %></p>
         </div>
         <% end %>
           </div>

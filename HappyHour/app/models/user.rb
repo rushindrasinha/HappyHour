@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_many :bars
+  mount_uploader :image, ImageUploader
+
 
   attr_reader :password
 

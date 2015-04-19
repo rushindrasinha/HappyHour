@@ -19,9 +19,26 @@
   border: 1px solid black;
   margin: 5px;
   padding: 5px;
+  text-align: center;
 }
 
 .edbutton {
   margin: 10px;
   padding: 10px;
+}
+
+.barlistself {
+  display: block;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.offerlist {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
 }
