@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h2> Add an offer to your Bar </h2>
+  <h2 class='centeralign'> Add an offer to your Bar </h2>
 
   <%= form_for [@bar, @offer], html: {multipart: true} do |f|  %>
     <div class="form-group">
@@ -7,10 +7,14 @@
       <%= f.text_field :item, class: "form-control" %>
     </div>
       <br>
-    <div class="form-group">
-      <%= f.label :price %>
-      <%= f.number_field :price, class: "form-control" %>
-    </div>
+      <form class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <%= f.number_field :price, class: "form-control", placeholder: "Price" %>
+          </div>
+        </div>
+      </form>
       <br>
     <div class="form-group">
       <%= f.label :description %>

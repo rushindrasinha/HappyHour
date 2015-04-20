@@ -1,5 +1,9 @@
 @import 'bootstrap';
 
+body {
+  background-color: #fff;
+}
+
 .login a {
   color: #9d9d9d;
   text-decoration: none;
@@ -16,7 +20,7 @@
 
 .barlist {
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #000;
   margin: 5px;
   padding: 5px;
   text-align: center;
@@ -29,7 +33,7 @@
 
 .barlistself {
   display: block;
-  border: 1px solid black;
+  border: 1px solid #000;
   margin: 5px;
   padding: 5px;
   text-align: center;
@@ -37,8 +41,37 @@
 
 .offerlist {
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #000;
   margin: 5px;
   padding: 5px;
   text-align: center;
+}
+
+.custom-head {
+  color: black;
+}
+
+.navbar-inverse {
+  background-color: #F44336;
+  border-color: #F44336;
+}
+.navbar-inverse .navbar-brand {
+  color: black;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: black;
+}
+
+.jumbotron {
+  background-color: #FF8A80;
+  color: black;
+}
+
+.centeralign {
+  text-align: center;
+}
+
+.inlineblock {
+  display: inline;
 }

@@ -7,9 +7,18 @@ class PagesController < ApplicationController
   end
 
   def index
-    @users = User.all
+  if params[:q]
+    @bars = Bar.where("location like ?", '%' + params[:q] + '%')
+  elsif params[:r]
+    @bars = Bar.where("zip like ?", '%' + params[:r] + '%')
+  elsif params[:p]
+    @bars = Bar.where("bar_name like ?", '%' + params[:p] + '%')
+  elsif params[:s]
+    @bars = Bar.where("day like ?", '%' + params[:s] + '%')
+  else
     @bars = Bar.all
   end
+end
 
   def new
     @user = User.new

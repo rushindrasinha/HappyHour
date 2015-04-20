@@ -1,26 +1,46 @@
 
 
-<div class="jumbotron">
+<div class="jumbotron centeralign">
     <h2>Happy Hour</h2>
     <p>Anytime + Anywhere ... Find you the best Happy Hour Deals around you</p>
 </div>
     <% if logged_in? %>
-    <h2>List of Bars</h2>
+    <h2 class="centeralign">List of Bars</h2>
+    <form class="form-inline">
+      <div class="form-group">
+        <%= form_tag(root_path, {method: "get"}) do %>
+          <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search by Location") %>
+          <%= submit_tag "Search", class: "btn btn-md btn-default" %>
+        <% end %>
+        <%= form_tag(root_path, {method: "get"}) do %>
+          <%= text_field_tag(:r, nil, class: "form-control", placeholder: "Search by Zip Code") %>
+          <%= submit_tag "Search", class: "btn btn-md btn-default" %>
+        <% end %>
+        <%= form_tag(root_path, {method: "get"}) do %>
+          <%= text_field_tag(:s, nil, class: "form-control", placeholder: "Search by HH Day") %>
+          <%= submit_tag "Search", class: "btn btn-md btn-default" %>
+        <% end %>
+        <%= form_tag(root_path, {method: "get"}) do %>
+          <%= text_field_tag(:p, nil, class: "form-control", placeholder: "Search by Bar Name") %>
+          <%= submit_tag "Search", class: "btn btn-md btn-default" %>
+        <% end %>
+      </div>
+    </form>
        <ul>
         <% @bars.each do |bar| %>
           <div class="barlist">
         <p><h3><%= bar.bar_name %></h3></p>
         <p><%= image_tag(bar.image_url) %></p>
-        <p><strong>Location : <%= bar.location %></strong></p>
-        <p><strong>Zip Code : <%= bar.zip %></strong></p>
-        <p><strong>Happy Hour Day(s) : <%= bar.day %></strong></p>
-        <p><strong>Happy Hour Timings : <%= bar.time %></strong></p>
-        <p><strong>Summary : <%= bar.description %></strong></p>
+        <p>Location : <%= bar.location %></p>
+        <p>Zip Code : <%= bar.zip %></p>
+        <p>Happy Hour Day(s) : <%= bar.day %></p>
+        <p>Happy Hour Timings : <%= bar.time %></p>
+        <p>Summary : <%= bar.description %></p>
         <% bar.offers.each do |offer| %>
         <div class="barlist">
-          <p><strong>Item : <%= offer.item %></strong></p>
-          <p><strong>Price : $<%= offer.price %></strong></p>
-          <p><strong>Details : <%= offer.description %></strong></p>
+          <p>Item : <%= offer.item %></p>
+          <p>Price : $<%= offer.price %></p>
+          <p>Details : <%= offer.description %></p>
           <p><%= image_tag(offer.image_url(:thumb)) %></p>
         </div>
         <% end %>
@@ -30,3 +50,13 @@
     <% else %>
     <p> Welcome to Happy Hours </p>
     <% end %>
+
+
+
+<!--
+    <%= text_field_tag(:r, nil, class: "form-control", placeholder: "Search by Zip Code") %>
+    <%= submit_tag "Search", class: "btn btn-md btn-default" %>
+    <%= text_field_tag(:p, nil, class: "form-control", placeholder: "Search by Bar Name") %>
+    <%= submit_tag "Search", class: "btn btn-md btn-default" %>
+    <%= text_field_tag(:s, nil, class: "form-control", placeholder: "Search by Happy Hour Day") %>
+    <%= submit_tag "Search", class: "btn btn-md btn-default" %> -->
