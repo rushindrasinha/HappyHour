@@ -28,6 +28,7 @@ ___
 17. Added Scaled down and Thumbnail versions.
 18. Styled and organized the manage bars page better
 19. Added Number of bars displayed in navbar as well as number of offers in Manage Bar
+20. Added Search Bars for each field
 
 ---
 
