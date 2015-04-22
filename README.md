@@ -30,6 +30,7 @@ ___
 19. Added Number of bars displayed in navbar as well as number of offers in Manage Bar
 20. Added Search Bars for each field
 21. Changed Database from SQLite to PostgreSQL
+22. Switched from CarrierWave to Paperclip for Image Uploads
 
 ---
 
