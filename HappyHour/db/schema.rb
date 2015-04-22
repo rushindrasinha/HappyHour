@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418001016) do
+ActiveRecord::Schema.define(version: 20150422215341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,11 +22,14 @@ ActiveRecord::Schema.define(version: 20150418001016) do
     t.integer  "zip"
     t.string   "day"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "time"
-    t.string   "image"
     t.text     "description"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "bars", ["user_id"], name: "index_bars_on_user_id", using: :btree
@@ -36,9 +39,12 @@ ActiveRecord::Schema.define(version: 20150418001016) do
     t.string   "item"
     t.float    "price"
     t.integer  "bar_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "image"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "offers", ["bar_id"], name: "index_offers_on_bar_id", using: :btree
