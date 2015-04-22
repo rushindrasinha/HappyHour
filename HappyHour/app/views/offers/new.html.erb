@@ -2,19 +2,19 @@
   <h2 class='centeralign'> Add an offer to your Bar </h2>
 
   <%= form_for [@bar, @offer], html: {multipart: true} do |f|  %>
+  <form class="form-inline">
     <div class="form-group">
       <%= f.label :item %>
       <%= f.text_field :item, class: "form-control" %>
     </div>
       <br>
-      <form class="form-inline">
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon">$</div>
             <%= f.number_field :price, class: "form-control", placeholder: "Price" %>
           </div>
         </div>
-      </form>
+
       <br>
     <div class="form-group">
       <%= f.label :description %>
@@ -28,5 +28,6 @@
       <br>
 
       <%= f.submit "Add This Offer!", class: "btn btn-lg btn-default" %>
+    </form>
   <% end %>
 </div>

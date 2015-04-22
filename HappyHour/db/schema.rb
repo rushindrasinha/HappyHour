@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150418001016) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bars", force: :cascade do |t|
     t.string   "bar_name"
     t.string   "location"
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150418001016) do
     t.text     "description"
   end
 
-  add_index "bars", ["user_id"], name: "index_bars_on_user_id"
+  add_index "bars", ["user_id"], name: "index_bars_on_user_id", using: :btree
 
   create_table "offers", force: :cascade do |t|
     t.text     "description"
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 20150418001016) do
     t.string   "image"
   end
 
-  add_index "offers", ["bar_id"], name: "index_offers_on_bar_id"
+  add_index "offers", ["bar_id"], name: "index_offers_on_bar_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -48,4 +51,6 @@ ActiveRecord::Schema.define(version: 20150418001016) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "bars", "users"
+  add_foreign_key "offers", "bars"
 end
